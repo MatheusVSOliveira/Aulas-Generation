@@ -4,7 +4,9 @@ public class LacosDecisao_Exercicio1 {
 
 	public static void main(String[] args) {
 		
-		int num1,num2,num3,maiorNum;
+		
+		
+		int num1,num2,num3;
 		Scanner leia = new Scanner(System.in);
 		
 		System.out.print("Digite o primeiro número inteiro: ");
@@ -16,18 +18,15 @@ public class LacosDecisao_Exercicio1 {
 		
 		if(num1 > num2 && num1 > num3 || num1 == num2 && num2 > num3)
 		{
-			maiorNum = num1;
-			System.out.print("O maior número entre os 3 digitados é: " + maiorNum);
+			System.out.print("O maior número entre os 3 digitados é: " + num1);
 		}
 		else if (num2 > num1 && num2 > num3 || num2 == num1 && num1 > num3) 
 		{
-			maiorNum = num2;
-			System.out.print("O maior número entre os 3 digitados é: " + maiorNum);
+			System.out.print("O maior número entre os 3 digitados é: " + num2);
 		}
 		else if (num3 > num1 && num3 > num2 || num3 == num1 && num1 > num2)
 		{
-			maiorNum = num3;
-			System.out.print("O maior número entre os 3 digitados é: " + maiorNum);
+			System.out.print("O maior número entre os 3 digitados é: " + num3);
 		}
 		else
 		{

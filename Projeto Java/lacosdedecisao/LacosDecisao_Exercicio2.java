@@ -3,62 +3,50 @@ import java.util.Scanner;
 public class LacosDecisao_Exercicio2 {
 
 	public static void main(String[] args) {
+/*
+	    MENOR   MEIO  MAIOR
+		 A   	 B	   C
+		 A 		 C     B
+		 B		 A     C
+		 B		 C	   A	
+		 C		 A     B 
+		 C		 A     A	 
+*/
 		
-		int num1,num2,num3,maiorNum=0,menorNum=0,meioNum=0;
+		int a,b,c;
 		Scanner leia = new Scanner(System.in);
 		
 		System.out.print("Digite o primeiro número inteiro: ");
-		num1 = leia.nextInt();
+		a = leia.nextInt();
 		System.out.print("Digite o segundo número inteiro: ");
-		num2 = leia.nextInt();
+		b = leia.nextInt();
 		System.out.print("Digite o terceiro número intero: ");
-		num3 = leia.nextInt();
+		c = leia.nextInt();
 		
-		if(num1 > num2 && num2 > num3 || num1==num2 && num2 > num3 || num1 > num2 && num2 == num3) 
+		if(a <= b && b <= c) 
 		{
-			maiorNum = num1;
-			meioNum = num2;
-			menorNum = num3;
+			System.out.print(a + ", " + b + ", " + c);
 		}
-		else if (num1 > num3 && num3 > num2 || num1==num3 && num3 > num2) 
+		else if (a <= c && c <= b) 
 		{
-			maiorNum = num1;
-			meioNum = num3;
-			menorNum = num2;
+			System.out.print(a + ", " + c + ", " + b);
 		}
-		else if (num2 > num1 && num1 > num3 || num2 == num1 && num1 > num3 || num2 > num1 && num1 == num3) 
+		else if (b <= a && a <= c )
 		{
-			maiorNum = num2;
-			meioNum = num1;
-			menorNum = num3;
+			System.out.print(b + ", " + a + ", " + c);
 		}
-		else if (num2 > num3 && num3 > num1 || num2 == num3 && num3 > num1) 
+		else if (b <= c && c <= a)
 		{
-			maiorNum = num2;
-			meioNum = num3;
-			menorNum = num1;
+			System.out.print(b + ", " + c + ", " + a);
 		}
-		else if(num3 > num1 && num1 > num2 || num3 == num1 && num1 > num2 || num3 > num1 && num1 == num2) 
+		else if(c <= a && a <= b) 
 		{
-			maiorNum = num3;
-			meioNum = num1;
-			menorNum = num2;
-		}
-		else if(num3 > num2 && num2 > num1 || num3 == num2 && num2 > num1) 
-		{
-			maiorNum = num3;
-			meioNum = num2;
-			menorNum = num1;
+			System.out.print(c + ", " + a + ", " + b);
 		}
 		else 
 		{
-			maiorNum = num1;
-			meioNum = num2;
-			menorNum = num3;
+			System.out.print(c + ", " + a + ", " + a);
 		}
-		
-		
-		System.out.print(menorNum+ " " + meioNum + " " + maiorNum);
-	    leia.close();
+		leia.close();
     }
 }	
