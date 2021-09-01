@@ -4,8 +4,6 @@ public class LacosDecisao_Exercicio1 {
 
 	public static void main(String[] args) {
 		
-		
-		
 		int num1,num2,num3;
 		Scanner leia = new Scanner(System.in);
 		

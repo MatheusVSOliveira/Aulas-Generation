@@ -20,5 +20,4 @@ public class LacosDecisao_Exercicio4 {
 		}
 		leia.close();
 	}
-
 }
