@@ -27,7 +27,7 @@ public class LacosDecisao_Exercicio3 {
 		}
 		else 
 		{
-			System.out.print("Outra categoria");
+			System.out.print("Sem categoria");
 		}
 		leia.close();
 	}

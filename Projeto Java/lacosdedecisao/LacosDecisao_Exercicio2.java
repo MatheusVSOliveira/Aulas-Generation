@@ -12,11 +12,11 @@ MAIOR C B C A B A
 		int a,b,c;
 		Scanner leia = new Scanner(System.in);
 		
-		System.out.print("Digite o primeiro número inteiro: ");
+		System.out.print("Digite o primeiro número: ");
 		a = leia.nextInt();
-		System.out.print("Digite o segundo número inteiro: ");
+		System.out.print("Digite o segundo número: ");
 		b = leia.nextInt();
-		System.out.print("Digite o terceiro número intero: ");
+		System.out.print("Digite o terceiro número: ");
 		c = leia.nextInt();
 		
 		if(a <= b && b <= c) 

@@ -7,11 +7,11 @@ public class LacosDecisao_Exercicio1 {
 		int num1,num2,num3;
 		Scanner leia = new Scanner(System.in);
 		
-		System.out.print("Digite o primeiro número inteiro: ");
+		System.out.print("Digite o primeiro número: ");
 		num1 = leia.nextInt();
-		System.out.print("Digite o segundo número inteiro: ");
+		System.out.print("Digite o segundo número: ");
 		num2 = leia.nextInt();
-		System.out.print("Digite o terceiro número intero: ");
+		System.out.print("Digite o terceiro número: ");
 		num3 = leia.nextInt();
 		
 		if(num1 > num2 && num1 > num3 || num1 == num2 && num2 > num3)
