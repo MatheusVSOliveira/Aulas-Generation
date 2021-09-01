@@ -4,13 +4,9 @@ public class LacosDecisao_Exercicio2 {
 
 	public static void main(String[] args) {
 /*
-	    MENOR   MEIO  MAIOR
-		 A   	 B	   C
-		 A 		 C     B
-		 B		 A     C
-		 B		 C	   A	
-		 C		 A     B 
-		 C		 A     A	 
+MENOR A A B B C C
+MEIO  B C A C A A
+MAIOR C B C A B A			 
 */
 		
 		int a,b,c;
