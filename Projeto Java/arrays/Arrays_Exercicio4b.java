@@ -9,7 +9,7 @@ Na terceira opção o valor da constante deve ser lido e o resultado da adição da 
 
 import java.util.Scanner;
 
-public class Arrays_Exercicio4 {
+public class Arrays_Exercicio4b {
 
 	public static void main(String[] args) {
 		
@@ -49,105 +49,105 @@ public class Arrays_Exercicio4 {
 			opcao = leia.nextInt();
 		}
 		
-		if (opcao == 1)
+		switch (opcao)
+		{ 
+		case 1:
+		for (int l = 0; l < 2; l++) //Soma das Matrizes
 		{
-			for (int l = 0; l < 2; l++) //Soma das Matrizes
+			for(int c = 0; c < 2; c++)
 			{
-				for(int c = 0; c < 2; c++)
-				{
 					matriz3[l][c] = matriz1[l][c] + matriz2[l][c];	
-				}
 			}
+		}
 			
-			System.out.println("--SOMA DAS MATRIZES--");
-			for (int l = 0; l < 2; l++) 
+		System.out.println("--SOMA DAS MATRIZES--");
+		for (int l = 0; l < 2; l++) 
+		{
+			for(int c = 0; c < 2; c++)
 			{
-				for(int c = 0; c < 2; c++)
-				{
-					System.out.print(matriz3[l][c] + " ");	
-				}
-				System.out.println(" ");
+				System.out.print(matriz3[l][c] + " ");	
+			}
+			System.out.println(" ");
+		}	
+		break;
+		case 2:
+		for (int l = 0; l < 2; l++) //Subtração das Matrizes
+		{
+			for(int c = 0; c < 2; c++)
+			{
+				matriz3[l][c] = matriz1[l][c] - matriz2[l][c];	
 			}
 		}
-		else if(opcao == 2) 
+		System.out.println("--DIFERENÇA DAS MATRIZES--");
+		for (int l = 0; l < 2; l++) 
 		{
-			for (int l = 0; l < 2; l++) //Subtração das Matrizes
+			for(int c = 0; c < 2; c++)
 			{
-				for(int c = 0; c < 2; c++)
-				{
-					matriz3[l][c] = matriz1[l][c] - matriz2[l][c];	
-				}
+				System.out.print(matriz3[l][c] + " ");	
 			}
-			System.out.println("--DIFERENÇA DAS MATRIZES--");
-			for (int l = 0; l < 2; l++) 
+			System.out.println(" ");
+		}
+		break;
+		case 3:
+		System.out.print("Digite uma constante para somar com as matrizes 1 e 2: ");
+		constante = leia.nextFloat();
+		for (int l = 0; l < 2; l++) 
+		{
+			for(int c = 0; c < 2; c++)
 			{
-				for(int c = 0; c < 2; c++)
-				{
-					System.out.print(matriz3[l][c] + " ");	
-				}
-				System.out.println(" ");
+				matriz1[l][c] += constante;
+				matriz2[l][c] += constante;	
 			}
 		}
-		else if(opcao == 3) 
+		System.out.println("--MATRIZ1 COM A CONSTANTE--"); //Leitura da matriz1 com a constante
+		for (int l = 0; l < 2; l++) 
 		{
-			System.out.print("Digite uma constante para somar com as matrizes 1 e 2: ");
-			constante = leia.nextFloat();
-			for (int l = 0; l < 2; l++) 
+			for(int c = 0; c < 2; c++)
 			{
-				for(int c = 0; c < 2; c++)
-				{
-					matriz1[l][c] += constante;
-					matriz2[l][c] += constante;	
-				}
+				System.out.print(matriz1[l][c] + " ");	
 			}
-			System.out.println("--MATRIZ1 COM A CONSTANTE--"); //Leitura da matriz1 com a constante
-			for (int l = 0; l < 2; l++) 
-			{
-				for(int c = 0; c < 2; c++)
-				{
-					System.out.print(matriz1[l][c] + " ");	
-				}
-				System.out.println(" ");
-			}
-			System.out.println("--MATRIZ2 COM A CONSTANTE--"); //Leitura da matriz2 com a constante
-			for (int l = 0; l < 2; l++) 
-			{
-				for(int c = 0; c < 2; c++)
-				{
-					System.out.print(matriz2[l][c] + " ");	
-				}
-				System.out.println(" ");
-			}
+			System.out.println(" ");
 		}
-		else if(opcao == 4) 
+		System.out.println("--MATRIZ2 COM A CONSTANTE--"); //Leitura da matriz2 com a constante
+		for (int l = 0; l < 2; l++) 
 		{
-			System.out.println("---MATRIZ1---");
-			for (int l = 0; l < 2; l++) //Saída de dados na Matriz1
+			for(int c = 0; c < 2; c++)
 			{
-				for(int c = 0; c < 2; c++)
-				{
-					System.out.print(matriz1[l][c] + " ");
+				System.out.print(matriz2[l][c] + " ");	
+			}
+			System.out.println(" ");
+		}
+		break;
+		case 4:
+		System.out.println("---MATRIZ1---");
+		for (int l = 0; l < 2; l++) //Saída de dados na Matriz1
+		{
+			for(int c = 0; c < 2; c++)
+			{
+				System.out.print(matriz1[l][c] + " ");
 					
-				}
-				System.out.println("");
 			}
+			System.out.println("");
+		}
 			
-			System.out.println("---MATRIZ2---");
-			for (int l = 0; l < 2; l++) //Saída de dados na Matriz2
-			{
-				for(int c = 0; c < 2; c++)
-				{
-					System.out.print(matriz2[l][c] + " ");
-					
-				}
-				System.out.println("");
-			}
-		}
-		else 
+		System.out.println("---MATRIZ2---");
+		for (int l = 0; l < 2; l++) //Saída de dados na Matriz2
 		{
+			for(int c = 0; c < 2; c++)
+			{
+				System.out.print(matriz2[l][c] + " ");
+					
+			}
+			System.out.println("");
+		}
+		break;
+		case 5:
 			System.out.println("Obrigado por utilizar o nosso programa! Saindo...");
-		}
-		leia.close();
+		break;
 	}
+		leia.close();
 
+  }
+	
 }
+	
