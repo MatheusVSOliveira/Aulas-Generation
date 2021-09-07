@@ -114,7 +114,7 @@ public class Arrays_Exercicio4 {
 			{
 				for(int c = 0; c < 2; c++)
 				{
-					System.out.print(matriz1[l][c] + " ");	
+					System.out.print(matriz2[l][c] + " ");	
 				}
 				System.out.println(" ");
 			}
