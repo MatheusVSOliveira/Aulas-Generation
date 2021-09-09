@@ -1,4 +1,4 @@
-package poo;
+package poo_exercicio6;
 
 public class ContaBanco {
 	

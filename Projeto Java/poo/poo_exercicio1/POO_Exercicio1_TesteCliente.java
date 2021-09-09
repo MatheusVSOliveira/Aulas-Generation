@@ -1,4 +1,4 @@
-package poo;
+package poo_exercicio1;
 
 public class POO_Exercicio1_TesteCliente {
 

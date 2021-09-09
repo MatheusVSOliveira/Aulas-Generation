@@ -1,4 +1,4 @@
-package poo;
+package poo_exercicio1;
 import java.util.Scanner;
 public class Cliente {
 	Scanner leia = new Scanner(System.in);
