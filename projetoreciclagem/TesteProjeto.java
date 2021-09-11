@@ -4,8 +4,11 @@ public class TesteProjeto {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		MaterialPapel jornal = new MaterialPapel("papel","sujo");
-		jornal.descartar();
+		MaterialVidro garrafa = new MaterialVidro();
+		garrafa.descartar();
+		garrafa.calcularReciclaveis();
+		garrafa.danoAmbiente();
+		System.out.println(garrafa.getGarrafas());
 	}
 
 }
