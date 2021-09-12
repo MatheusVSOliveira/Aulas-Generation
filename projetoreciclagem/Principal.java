@@ -1,6 +1,6 @@
 package projetoreciclagem;
 
-public class TesteProjeto {
+public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -18,10 +18,21 @@ public class TesteProjeto {
 		
 		MaterialPlastico plastico = new MaterialPlastico();
 		//plastico.descartar();
-		plastico.calcularReciclaveis();
+		//plastico.calcularReciclaveis();
 		//plastico.danoAmbiente(); //será chamado no método calcular
 		//plastico.reutilizar();
 		
+		MaterialEspecial especial = new MaterialEspecial();
+		//especial.descartar();
+		//especial.calcularReciclaveis();
+		//especial.danoAmbiente(); //será chamado no método calcular
+		//especial.reutilizar();
+		
+		MaterialMetal metal = new MaterialMetal();
+		//metal.descartar();
+		//metal.calcularReciclaveis();
+		//metal.danoAmbiente(); //será chamado no método calcular
+		metal.reutilizar();
 	}
 
 }

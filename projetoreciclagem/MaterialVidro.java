@@ -66,14 +66,14 @@ public class MaterialVidro extends MaterialReciclavel implements Reciclagem {
 	{
     boolean validaVidro = false;
 		
-		System.out.println("Informe o tipo de vidro a ser descartado:\n[Garrafa] \n[Cacos] \n[Recipiente]");
+		System.out.println("Digite o tipo de vidro a ser descartado:\n[Garrafa] \n[Cacos] \n[Recipiente]");
 		setEscolha(leia.nextLine());
 		do {
 			if (getEscolha().equalsIgnoreCase("Garrafa") || getEscolha().equalsIgnoreCase("Cacos") || getEscolha().equalsIgnoreCase("Recipiente")) {
 				validaVidro = true;
 			} else {
 				validaVidro = false;
-				System.out.println("Opção não econtrada! escolha uma das opções abaixo para descarte:\n[Garrafa] \n[Cacos] \n[Recipiente] ");
+				System.out.println("Opção não encontrada! escolha uma das opções abaixo para descarte:\n[Garrafa] \n[Cacos] \n[Recipiente] ");
 				setEscolha(leia.nextLine());
 		    }	
 		} while (!validaVidro); //negação de true, condição falsa e saída do laço

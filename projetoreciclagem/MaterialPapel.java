@@ -80,7 +80,7 @@ public class MaterialPapel extends MaterialReciclavel implements Reciclagem {
 	{
 		boolean validapapel = false;
 		
-		System.out.println("Informe o tipo de papel a ser descartado:\n[Jornal] \n[revista] \n[livro] \n[papelão]");
+		System.out.println("Digite o tipo de papel a ser descartado:\n[Jornal] \n[revista] \n[livro] \n[papelão]");
 		setEscolha(leia.nextLine());
 		
 		do {
@@ -88,7 +88,7 @@ public class MaterialPapel extends MaterialReciclavel implements Reciclagem {
 				validapapel = true;
 			} else {
 				validapapel = false;
-				System.out.println("Opção não econtrada! escolha uma das opções abaixo para descarte:\n[Jornal] \n[revista] \n[livro] \n[papelão] ");
+				System.out.println("Opção não encontrada! escolha uma das opções abaixo para descarte:\n[Jornal] \n[revista] \n[livro] \n[papelão] ");
 				setEscolha(leia.nextLine());
 		    }	
 		} while (!validapapel); //negação de true, condição falsa e saída do laço

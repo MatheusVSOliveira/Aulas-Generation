@@ -66,7 +66,7 @@ public class MaterialPlastico extends MaterialReciclavel  implements Reciclagem{
 	{
     boolean validaPlastico = false;
 		
-		System.out.println("Informe o tipo de plástico a ser descartado:\n[Garrafa pet] \n[Embalagem] \n[Outros]");
+		System.out.println("Digite o tipo de plástico a ser descartado:\n[Garrafa pet] \n[Embalagem] \n[Outros]");
 		setEscolha(leia.nextLine());
 		
 		do {
@@ -74,7 +74,7 @@ public class MaterialPlastico extends MaterialReciclavel  implements Reciclagem{
 				validaPlastico = true;
 			} else {
 				validaPlastico = false;
-				System.out.println("Opção não econtrada! escolha uma das opções abaixo para descarte:\n[Garrafa pet] \n[Embalagem] \n[Outros]");
+				System.out.println("Opção não encontrada! escolha uma das opções abaixo para descarte:\n[Garrafa pet] \n[Embalagem] \n[Outros]");
 				setEscolha(leia.nextLine());
 		    }	
 		} while (!validaPlastico); //negação de true, condição falsa e saída do laço
