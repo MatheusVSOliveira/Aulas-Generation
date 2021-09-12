@@ -11,10 +11,16 @@ public class TesteProjeto {
 		//papel.reutilizar();
 		
 		MaterialVidro vidro = new MaterialVidro();
-		vidro.descartar();
-		vidro.calcularReciclaveis();
+		//vidro.descartar();
+		//vidro.calcularReciclaveis();
 		//vidro.danoAmbiente(); //será chamado no método calcular
-		vidro.reutilizar();
+		//vidro.reutilizar();
+		
+		MaterialPlastico plastico = new MaterialPlastico();
+		//plastico.descartar();
+		plastico.calcularReciclaveis();
+		//plastico.danoAmbiente(); //será chamado no método calcular
+		//plastico.reutilizar();
 		
 	}
 

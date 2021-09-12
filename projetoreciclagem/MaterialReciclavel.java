@@ -3,8 +3,7 @@ import java.util.Scanner;
 public abstract class MaterialReciclavel {
 	Scanner leia  = new Scanner(System.in);
 	private int tipo;
-	private int reutilizacao;
-	private int quantidade;
+	private String escolha;
 	public MaterialReciclavel() 
 	{
 
@@ -18,20 +17,13 @@ public abstract class MaterialReciclavel {
 		this.tipo = tipo;
 	}
 
-	public int getReutilizacao() {
-		return reutilizacao;
+
+	public String getEscolha() {
+		return escolha;
 	}
 
-	public void setReutilizacao(int reutilizacao) {
-		this.reutilizacao = reutilizacao;
-	}
-
-	public int getQuantidade() {
-		return quantidade;
-	}
-
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
+	public void setEscolha(String escolha) {
+		this.escolha = escolha;
 	}
 	
 }
