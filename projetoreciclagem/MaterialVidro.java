@@ -79,6 +79,7 @@ public class MaterialVidro extends MaterialReciclavel implements Reciclagem {
 			System.out.println("\nInforme a quantidade de recipientes a serem descartados:");
 			recipientes = leia.nextInt();
 		}
+		this.danoAmbiente();
 	}
 	
 	@Override
@@ -94,9 +95,15 @@ public class MaterialVidro extends MaterialReciclavel implements Reciclagem {
 		}
 		if(getTipo() == 3) 
 		{
-			System.out.println("\"Você deixará de descartar " +recipientes+ " recipientes de vidro no meio ambiente! Parabéns!");
+			System.out.println("Você deixará de descartar " +recipientes+ " recipientes de vidro no meio ambiente! Parabéns!");
 			
 		}
+		
+		System.out.println("\n========== Impacto ambiental  ===========\n\n"
+				+ "- Ao reciclar ou reutilizar, evitamos a geração de resíduos de vidro. \n"
+                + "- Reduzimos o consumo de água.\n"
+                + "- O descarte equivocado do vidro é responsável por gerar consequências como o ferimentos de animais e humanos.\n"
+		        + "- O vidro demora mais de mil anos para se decompor no meio ambiente.");
 	}
 	
 	
@@ -104,7 +111,27 @@ public class MaterialVidro extends MaterialReciclavel implements Reciclagem {
     @Override
     public void reutilizar() 
     {
-	
+    	
+    	System.out.println("Selecione o tipo de vidro a ser reutilizado ou descartado: \n[1]Garrafas\n[2]Cacos\n[3]Recipientes");
+		setTipo(leia.nextInt());
+		while(getTipo() < 1 || getTipo() > 3) 
+		{
+			System.out.println("Opção inválida! Selecione o tipo de vidro a ser reutilizado ou descartado: \n[1]Garrafas\n[2]Cacos\n[3]Recipientes");
+			setTipo(leia.nextInt());
+		}
+    	if(getTipo() == 1) 
+		{
+			System.out.println("Reutilize as suas garrafas para armazenar coisas de seu interesse! Ou leve para um centro de coleta de materiais recicláveis");
+		}
+		if(getTipo() == 2) 
+		{
+			System.out.println("Pedaços de vidros não podem ser reutilizados! Embrulhe com cuidado e leve para um centro de coleta de materiais recicláveis");
+		}
+		if(getTipo() == 3) 
+		{
+			System.out.println("Reutilize os seus recipientes para armazenar coisas de seu interesse! Ou leve para um centro de coleta de materiais recicláveis");
+			
+		}
     }
 	
 	
