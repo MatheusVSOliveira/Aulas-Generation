@@ -28,15 +28,15 @@ public class MaterialMetal extends MaterialReciclavel implements Reciclagem {
 	@Override
 	public void descartar() 
 	{
-		System.out.println("Informe qual é a opção de metal que deseja descartar: ");
-		System.out.println("[1]Ferro\n[2]Aluminio\n[3]Cobre\n[4]Sair");
+		System.out.println("\n\t-- Escolha o tipo de metal que deseja descartar --");
+		System.out.println("1-Ferro\n2-Aluminio\n3-Cobre\n4-Voltar ao menu principal");
 		setTipo(leia.nextInt());
 		
 		while(getTipo() < 1 || getTipo() > 4) 
 		{
-			System.out.println("Opção inválida");
-			System.out.println("Informe qual é a opção de metal que deseja descartar: ");
-			System.out.println("[1]Ferro\n[2]Aluminio\n[3]Cobre\n[4]Sair");
+			System.out.println("Opção Inválida! tente novamente.\n");
+			System.out.println("\n\t-- Escolha o tipo de metal que deseja descartar --");
+			System.out.println("1-Ferro\n2-Aluminio\n3-Cobre\n4-Voltar ao menu principal");
 			setTipo(leia.nextInt());
 		}
 	
@@ -56,24 +56,25 @@ public class MaterialMetal extends MaterialReciclavel implements Reciclagem {
 		break;
 		
 		case 4:
-			System.out.println("Obrigado por utilizar nosso sistema! Saindo...");
+			System.out.println("\nVoltando ao Menu Principal....");
 		}
 	}
 	@Override
 	public void calcularReciclaveis() 
 	{
-		 boolean validaMetal = false;
-			
+		 
+		boolean validaMetal = false;
+		leia.nextLine();
 			System.out.println("Digite o tipo de metal a ser descartado:\n[Ferro] \n[Aluminio] \n[Cobre]");
 			setEscolha(leia.next());
 			
 			do {
+				leia.nextLine();
 				if (getEscolha().equalsIgnoreCase("Ferro") || getEscolha().equalsIgnoreCase("Aluminio") || getEscolha().equalsIgnoreCase("Cobre")) {
 					validaMetal = true;
 				} else {
 					validaMetal = false;
 					System.out.println("Opção não encontrada! escolha uma das opções abaixo para descarte:\n[Ferro] \n[Aluminio] \n[Cobre]");
-					setEscolha(leia.nextLine());
 					setEscolha(leia.nextLine());
 			    }	
 			} while (!validaMetal); //negação de true, condição falsa e saída do laço
@@ -94,7 +95,7 @@ public class MaterialMetal extends MaterialReciclavel implements Reciclagem {
 				setCobre(leia.nextDouble());
 			}
 			this.danoAmbiente();
-				
+			
 	}
 	@Override
 	public void danoAmbiente() 
@@ -111,7 +112,7 @@ public class MaterialMetal extends MaterialReciclavel implements Reciclagem {
 		{
 			System.out.println("Você deixará de descartar " +cobre+ " gramas de cobre no meio ambiente e eles poderão ser reutilizados! Parabéns!");
 		}
-		
+				
 		System.out.println("\n========== Impacto ambiental  ===========\n\n"
 				+ "- Ao reciclar ou reutilizar, evitamos a geração de resíduos de metais. \n"
                 + "- Os impactos ambientais ao meio ambiente decorrentes da mineração e refinação de metais são diminuídos\n"
@@ -120,14 +121,14 @@ public class MaterialMetal extends MaterialReciclavel implements Reciclagem {
 	@Override
 	public void reutilizar() 
 	{
-		System.out.println("QUAL TIPO DE COMPONENTE DESEJA REUTILIZAR: ");
-		System.out.println("[1]Ferro\n[2]Aluminio\n[3]Cobre");
+		System.out.println("\\n\\t-- Escolha o tipo de metal que deseja reutilizar --");
+		System.out.println("1-Ferro\n2-Aluminio\n3-Cobre");
 		setTipo(leia.nextInt());
 		while(getTipo() < 1||getTipo () > 3) 
 		{
 			System.out.println("Opção Inválida! tente novamente.\n");
-			System.out.println("QUAL TIPO DE CONPONENTE DESEJA DESCARTAR: ");
-			System.out.println("[1]Ferro\n[2]Aluminio\n[3]Cobre");
+			System.out.println("\n\t-- Escolha o tipo de metal que deseja reutilizar --");
+			System.out.println("1-Ferro\n2-Aluminio\n3-Cobre");
 			setTipo(leia.nextInt()); 
 		}
 		

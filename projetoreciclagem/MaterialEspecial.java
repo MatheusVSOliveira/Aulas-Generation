@@ -28,14 +28,14 @@ public class MaterialEspecial extends MaterialReciclavel implements Reciclagem {
 	@Override
 	public void descartar() 
 	{
-		System.out.println("QUAL TIPO DE COMPONENTE DESEJA DESCARTAR: ");
-		System.out.println("[1]Pilha\n[2]Bateria\n[3]Celular\n[4]Sair");
+		System.out.println("\n\t-- Escolha o tipo de material especial que deseja descartar --");
+		System.out.println("1-Pilha\n2-Bateria\n3-Celular\n4-Voltar ao menu principal");
 		setTipo(leia.nextInt());
 		while(getTipo() < 1||getTipo () > 4) 
 		{
 			System.out.println("Opção Inválida! tente novamente.\n");
-			System.out.println("QUAL TIPO DE CONPONENTE DESEJA DESCARTAR: ");
-			System.out.println("[1]Pilha\n[2]Bateria\n[3]Celular\n[4]Sair");
+			System.out.println("\n\t-- Escolha o tipo de material especial que deseja descartar --");
+			System.out.println("1-Pilha\n2-Bateria\n3-Celular\n4-Voltar ao menu principal");
 			setTipo(leia.nextInt()); 
 		}
 		
@@ -52,15 +52,16 @@ public class MaterialEspecial extends MaterialReciclavel implements Reciclagem {
 		case 3:System.out.println("\nLeve o celular, carregadores e cabos para lojas de operadoras. Eles possuem um coletor para este tipo de equipamento.");
 		break;	
 		
-		case 4:System.out.println("\nSaindo!");
+		case 4:System.out.println("\nVoltando ao Menu Principal...");
 		break;	
 		}
 	}
 	@Override
 	public void calcularReciclaveis() 
 	{
-		 boolean validaEspecial = false;
-			
+		 
+		boolean validaEspecial = false;
+		leia.nextLine();	
 			System.out.println("Digite o tipo de material especial a ser descartado:\n[Pilha] \n[Bateria] \n[Celular]");
 			setEscolha(leia.next());
 			
@@ -118,14 +119,14 @@ public class MaterialEspecial extends MaterialReciclavel implements Reciclagem {
 	@Override
 	public void reutilizar() 
 	{
-		System.out.println("QUAL TIPO DE COMPONENTE DESEJA REUTILIZAR: ");
-		System.out.println("[1]Pilha\n[2]Bateria\n[3]Celular");
+		System.out.println("\n\t-- Escolha o tipo de material especial que deseja reutilizar --");
+		System.out.println("1-Pilha\n2-Bateria\n3-Celular");
 		setTipo(leia.nextInt());
 		while(getTipo() < 1||getTipo () > 3) 
 		{
 			System.out.println("Opção Inválida! tente novamente.\n");
-			System.out.println("QUAL TIPO DE CONPONENTE DESEJA DESCARTAR: ");
-			System.out.println("[1]Pilha\n[2]Bateria\n[3]Celular");
+			System.out.println("\n\t-- Escolha o tipo de material especial que deseja reutilizar --");
+			System.out.println("1-Pilha\n2-Bateria\n3-Celular");
 			setTipo(leia.nextInt()); 
 		}
 		

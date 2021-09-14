@@ -5,5 +5,5 @@ public interface Reciclagem {
 	public abstract void calcularReciclaveis();
 	public abstract void danoAmbiente();
 	public abstract void reutilizar();
-	
+
 }
