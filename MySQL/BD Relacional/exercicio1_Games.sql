@@ -19,34 +19,35 @@ SELECT * FROM tb_classe;
 CREATE TABLE tb_personagens (
 id bigint auto_increment,
 nome varchar (255) not null,
-ataque bigint not null,
-defesa bigint not null,
+ataque int not null,
+defesa int not null,
+nivel int not null,
 classe_id bigint,
 PRIMARY KEY (id),
 FOREIGN KEY (classe_id) REFERENCES tb_classe(id)
 );
 
-INSERT INTO tb_personagens (nome, ataque, defesa,classe_id ) VALUES ("Mage Brabo","2500","500",1);
-INSERT INTO tb_personagens (nome, ataque, defesa,classe_id ) VALUES ("Druida Bolado","1500","600",4);
-INSERT INTO tb_personagens (nome, ataque, defesa,classe_id ) VALUES ("Flecha Dourada","2000","1000",2);
-INSERT INTO tb_personagens (nome, ataque, defesa,classe_id ) VALUES ("Cavaleiro Bruto","1800","1800",3);
-INSERT INTO tb_personagens (nome, ataque, defesa,classe_id ) VALUES ("Barbarão","2500","1000",5);
-INSERT INTO tb_personagens (nome, ataque, defesa,classe_id ) VALUES ("Mage Full","2500","500",1);
-INSERT INTO tb_personagens (nome, ataque, defesa,classe_id ) VALUES ("Curandeiro","1500","600",4);
-INSERT INTO tb_personagens (nome, ataque, defesa,classe_id ) VALUES ("Robin Hood","2000","1000",2);
+INSERT INTO tb_personagens (nome, ataque, defesa, nivel, classe_id ) VALUES ("Mage Brabo","2500","500",20,1);
+INSERT INTO tb_personagens (nome, ataque, defesa, nivel, classe_id ) VALUES ("Druida Bolado","1500","600",11,4);
+INSERT INTO tb_personagens (nome, ataque, defesa, nivel, classe_id ) VALUES ("Flecha Dourada","2000","1000",30,2);
+INSERT INTO tb_personagens (nome, ataque, defesa, nivel, classe_id ) VALUES ("Cavaleiro Bruto","1800","1800",45,3);
+INSERT INTO tb_personagens (nome, ataque, defesa, nivel, classe_id ) VALUES ("Barbarão","2500","1000",30,5);
+INSERT INTO tb_personagens (nome, ataque, defesa, nivel, classe_id ) VALUES ("Mage Full","2500","500",15,1);
+INSERT INTO tb_personagens (nome, ataque, defesa, nivel, classe_id ) VALUES ("Curandeiro","1500","600",23,4);
+INSERT INTO tb_personagens (nome, ataque, defesa, nivel, classe_id ) VALUES ("Robin Hood","2000","1000",50,2);
 
 SELECT * FROM tb_personagens;
 
-SELECT * FROM tb_personagens WHERE nome LIKE "%C%";
-
 SELECT * FROM tb_personagens WHERE ataque > 2000;
 
-SELECT * FROM tb_personagens WHERE ataque < 2000;
+SELECT * FROM tb_personagens WHERE defesa BETWEEN 1000 AND 2000;
 
-SELECT tb_personagens.nome, tb_personagens.ataque, tb_personagens.defesa, tb_classe.habilidade
-FROM tb_personagens INNER JOIN tb_classe
-ON tb_classe.id = tb_personagens.classe_id;
+SELECT * FROM tb_personagens WHERE nome LIKE "%C%";
+
+SELECT * FROM tb_personagens INNER JOIN tb_classe
+ON tb_classe.id = tb_personagens.classe_id; 
 
 SELECT tb_personagens.nome, tb_classe.vocacao
 FROM tb_personagens  INNER JOIN tb_classe
-ON tb_classe.id = tb_personagens.classe_id WHERE tb_classe.id =1;
+ON tb_classe.id = tb_personagens.classe_id 
+WHERE tb_classe.id =1;
