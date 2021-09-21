@@ -3,9 +3,9 @@ CREATE DATABASE db_generation_game_online;
 USE db_generation_game_online;
 
 CREATE TABLE tb_classe (
-	id bigint auto_increment,
-    vocacao varchar(255),
-    habilidade varchar(255),
+	id bigint AUTO_INCREMENT,
+    vocacao varchar(255) NOT NULL,
+    habilidade varchar(255) NOT NULL,
     primary key (id)
 );
 INSERT INTO tb_classe (vocacao, habilidade) VALUES ("Mago","Magia Negra");
