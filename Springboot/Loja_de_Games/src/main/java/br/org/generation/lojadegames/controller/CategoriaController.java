@@ -41,26 +41,26 @@ public class CategoriaController {
 		//select * from postagens where id =;
 	}
 	
-	@GetMapping("/nome/{nome}")
-	public ResponseEntity <List<Categoria>> getByNome(@PathVariable String descricao)
+	@GetMapping("/descricao/{descricao}")
+	public ResponseEntity <List<Categoria>> getByDescricao(@PathVariable String descricao)
 	{
 		return ResponseEntity.ok(categoriaRepository.findAllByDescricaoContainingIgnoreCase(descricao));
 	}
 	
 	@PostMapping
-	public ResponseEntity <Categoria> postProduto(@RequestBody Categoria categoria)
+	public ResponseEntity <Categoria> postCategoria(@RequestBody Categoria categoria)
 	{
 		return ResponseEntity.status(HttpStatus.CREATED).body(categoriaRepository.save(categoria));
 	}
 	
 	@PutMapping
-	public ResponseEntity <Categoria> putProduto(@RequestBody Categoria categoria)
+	public ResponseEntity <Categoria> putCategoria(@RequestBody Categoria categoria)
 	{
 		return ResponseEntity.status(HttpStatus.OK).body(categoriaRepository.save(categoria));
 	}
 	
 	@DeleteMapping("/{id}")
-	public void deleteProduto(@PathVariable long id) 
+	public void deleteCategoria(@PathVariable long id) 
 	{
 		categoriaRepository.deleteById(id);
 	}
