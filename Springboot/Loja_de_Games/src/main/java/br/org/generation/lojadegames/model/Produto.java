@@ -24,18 +24,20 @@ public class Produto
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@NotNull
-	@Size(min = 2, max = 255)
+	@NotNull(message = "O nome é obrigatório")
 	private String nome;
+	
+	@Size(max=500)
+	private String descricao;
 	
 	@NotNull
 	@Min(0)
-	private int quantidade_estoque;
+	private int quantidade;
 	
 	@NotNull
 	@Positive
-	@Digits(integer  = 3,fraction = 2, message = "O preço do jogo só pode ser uma centena")
-	private BigDecimal valor;
+	@Digits(integer  = 4,fraction = 2)
+	private BigDecimal preco;
 	
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
@@ -44,7 +46,7 @@ public class Produto
 	@ManyToOne 
 	@JsonIgnoreProperties("produto")
 	private Usuario usuario;
-	
+
 	public long getId() {
 		return id;
 	}
@@ -61,20 +63,28 @@ public class Produto
 		this.nome = nome;
 	}
 
-	public int getQuantidade_estoque() {
-		return quantidade_estoque;
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setQuantidade_estoque(int quantidade_estoque) {
-		this.quantidade_estoque = quantidade_estoque;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
-	public BigDecimal getValor() {
-		return valor;
+	public int getQuantidade() {
+		return quantidade;
 	}
 
-	public void setValor(BigDecimal valor) {
-		this.valor = valor;
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+
+	public BigDecimal getPreco() {
+		return preco;
+	}
+
+	public void setPreco(BigDecimal preco) {
+		this.preco = preco;
 	}
 
 	public Categoria getCategoria() {
@@ -92,7 +102,5 @@ public class Produto
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
-	
-	
 	
 }
