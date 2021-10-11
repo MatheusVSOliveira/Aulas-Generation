@@ -39,6 +39,10 @@ public class Produto
 	@Digits(integer  = 4,fraction = 2)
 	private BigDecimal preco;
 	
+	@NotNull
+	@Size(min = 5, max = 9999)
+	private String urlImagem;
+	
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
 	private Categoria categoria;
@@ -85,6 +89,14 @@ public class Produto
 
 	public void setPreco(BigDecimal preco) {
 		this.preco = preco;
+	}
+
+	public String getUrlImagem() {
+		return urlImagem;
+	}
+
+	public void setUrlImagem(String urlImagem) {
+		this.urlImagem = urlImagem;
 	}
 
 	public Categoria getCategoria() {
