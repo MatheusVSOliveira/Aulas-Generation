@@ -28,8 +28,11 @@ public class Produto {
 	@Size(min = 2, max = 255, message = "preenchimento do campo nome obrigatório")
 	private String nome;
 	
+	@NotNull
+	private String descricao;
+	
 	@Min(0)
-	private int qtdEstoque;
+	private int quantidade;
 	
 	@NotNull
 	private LocalDate vencimento;
@@ -38,11 +41,11 @@ public class Produto {
 	@Positive(message = "o valor deve ser maior que ZERO!")
 	private BigDecimal valor;
 	
-	@Size(max = 500)
-	private String descricao;
-	
 	@NotNull
 	private boolean receita;
+	
+	@Size(min = 5, max = 9999) 
+	private String urlImagem;
 	
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
@@ -64,12 +67,20 @@ public class Produto {
 		this.nome = nome;
 	}
 
-	public int getQtdEstoque() {
-		return qtdEstoque;
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public void setQtdEstoque(int qtdEstoque) {
-		this.qtdEstoque = qtdEstoque;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
 	}
 
 	public LocalDate getVencimento() {
@@ -88,20 +99,20 @@ public class Produto {
 		this.valor = valor;
 	}
 
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-
-	public boolean getReceita() {
+	public boolean isReceita() {
 		return receita;
 	}
 
 	public void setReceita(boolean receita) {
 		this.receita = receita;
+	}
+
+	public String getUrlImagem() {
+		return urlImagem;
+	}
+
+	public void setUrlImagem(String urlImagem) {
+		this.urlImagem = urlImagem;
 	}
 
 	public Categoria getCategoria() {
