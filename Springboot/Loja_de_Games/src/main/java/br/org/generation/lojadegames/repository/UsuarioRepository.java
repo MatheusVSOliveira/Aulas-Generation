@@ -1,5 +1,6 @@
 package br.org.generation.lojadegames.repository;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -11,4 +12,10 @@ import br.org.generation.lojadegames.model.Usuario;
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>
 {
 	public Optional<Usuario> findByUsuario(String usuario);
+	
+	//Método criado para a Sessão de testes 01
+	public List <Usuario> findAllByNomeContainingIgnoreCase(String nome); //select * from tb_usuarios where nome like "%nome procurado%"
+		
+	//Método criado para a Sessão de testes 02
+	public Usuario findByNome(String nome); // select * from tb_usuarios where nome = "nome procurado"
 }

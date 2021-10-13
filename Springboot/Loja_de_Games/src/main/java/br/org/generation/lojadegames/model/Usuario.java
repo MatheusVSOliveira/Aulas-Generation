@@ -42,6 +42,20 @@ public class Usuario
 	@JsonIgnoreProperties("usuario")
 	private List<Produto> produto;
 	
+	public Usuario(long id,String nome,String usuario,String senha, String tipoUsuario) 
+	{
+		this.id = id;
+		this.nome = nome;
+		this.usuario = usuario;
+		this.senha = senha;
+		this.tipoUsuario = tipoUsuario;
+	}
+	
+	public Usuario() //será utilizado para gerar um objeto nulo
+	{
+		
+	}
+	
 	public long getId() {
 		return id;
 	}
