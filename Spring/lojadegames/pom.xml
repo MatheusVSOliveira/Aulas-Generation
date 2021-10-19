@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.org.generation</groupId>
-	<artifactId>Loja_de_Games</artifactId>
+	<artifactId>lojadegames</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Loja_de_Games</name>
 	<description>Loja de Games</description>
